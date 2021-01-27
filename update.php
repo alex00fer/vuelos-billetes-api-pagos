@@ -4,40 +4,38 @@ require_once 'dbConnect.php';
 require_once 'utils.php';
 
 function update($data) {
-  /*
-  assert_array_fields($data, 'codigo', 'nuevo_codigo', 'origen', 'destino', 'fecha', 'hora', 'plazas', 'plazas_libres');
 
-  $conn = get_conn();
+  assert_array_fields($data, 'codigo', 'codigoVenta', 'dni', 'apellido', 'nombre');
 
-  $codigo = mysqli_real_escape_string($conn, $data['codigo']);
-  $nuevo_codigo = mysqli_real_escape_string($conn, $data['nuevo_codigo']);
-  $origen = mysqli_real_escape_string($conn, $data['origen']);
-  $destino = mysqli_real_escape_string($conn, $data['destino']);
-  $fecha = (mysqli_real_escape_string($conn, $data['fecha'])) + 0;
-  $hora = mysqli_real_escape_string($conn, $data['hora']);
-  $plazas = intval(mysqli_real_escape_string($conn, $data['plazas']));
-  $plazas_libres = intval(mysqli_real_escape_string($conn, $data['plazas_libres']));
-  $miQuery  = "DELETE FROM vuelos WHERE codigo = '$codigo'";
+  $coleccion = get_mongo_collection();
+    $filtro = [
+        'codigo' => $data["codigo"],
+        'vendidos.codigoVenta' => $data["codigoVenta"]
+    ];
+    $updateDoc = [
+        '$set' => [
+          'vendidos.$.dni' => $data['dni'],
+          'vendidos.$.apellido' => $data['apellido'],
+          'vendidos.$.nombre' => $data['nombre']
+        ]
+    ];
 
-  $miQuery  = "UPDATE vuelos SET codigo = '$nuevo_codigo', origen = '$origen' , destino = '$destino', fecha = (FROM_UNIXTIME($fecha/1000)), hora = '$hora', plazas = $plazas, plazasLibres = $plazas_libres ";
-  $miQuery .= "WHERE  codigo = '$codigo'";
-  
-  if ($conn->query($miQuery)) {
+    $updateResult = $coleccion->updateOne($filtro, $updateDoc);
+    $modifiedCount = $updateResult->getModifiedCount();
 
-    if ($conn->affected_rows < 1)
-      die(format_error("Code not found or no changes were made"));
+    if ($modifiedCount <= 0) {
+      die(format_error("No se han realizado cambios o no se pudo modificar la compra. Compruebe que los datos sean correctos"));
+    }
 
-    $result = array(
-      "success" =>  true,
-      "message" => "Updated sucessfully",
-      "codigo" => $codigo
+    $result = @array(
+      "estado" =>  true,
+      "codigo" => $data['codigo'],
+      "codigoVenta" => $data['codigoVenta'],
+      'dni' => $data['dni'],
+      'apellido' => $data['apellido'],
+      'nombre' => $data['nombre']
     );
     echo json_encode($result, JSON_PRETTY_PRINT);
 
-  } else {  // Error en la query
-    die(format_error("Internal error: ".$conn->error));
-  }
-
-  */
 }
  ?>

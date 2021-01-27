@@ -7,23 +7,18 @@ require_once 'utils.php';
 function read($data) {
 
   $coll = get_mongo_collection();
-  //echo var_dump($coll);
-  //$query = "SELECT * FROM vuelos";
-  //@addQuerySearch($conn, $query, $data); // add search based on $data
-  //$result = $conn->query($query);
 
   $search = [
     'origen' => ['$regex'=>searchRegex($data, "origen")],
     'destino' => ['$regex'=>searchRegex($data, "destino")],
     'fecha' => ['$regex'=>searchRegex($data, "fecha")]
   ];
-  $cursor = $coll->find($search);
+  $projection =  array('projection' =>array('_id'=>false,'vendidos' => false));
+  $cursor = $coll->find($search, $projection);
 
   //if ($cursor->isDead()) {
   //  die(format_error("Error interno: No se pudo conectar a la coleccion de mongo especificada"));
   //}
-
-  //echo var_dump($cursor);
 
   $arrayVuelos = array();
   $contador = 0;
