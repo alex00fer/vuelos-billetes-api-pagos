@@ -1,0 +1,223 @@
+[{
+  "_id": {
+    "$oid": "6007f81b5feb210ec8e908f3"
+  },
+  "codigo": "IB706",
+  "origen": "MADRID",
+  "destino": "BARCELONA",
+  "fecha": "2020-12-17",
+  "hora": "18:50",
+  "plazas_totales": 200,
+  "plazas_disponibles": 197,
+  "vendidos": [
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Garcia",
+      "nombre": "Jose Maria",
+      "dniPagador": "44556677H",
+      "tarjeta": "038 0025 5553 5553",
+      "codigoVenta": "1iEuG1M"
+    },
+    {
+      "asiento": 3,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "María",
+      "dniPagador": "44556677H",
+      "tarjeta": "038 0025 5553 5553",
+      "codigoVenta": "AmwJwtH"
+    },
+    {
+      "asiento": 3,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "María",
+      "dniPagador": "44556677H",
+      "tarjeta": "038 0025 5553 5553",
+      "codigoVenta": "cL66wOx"
+    },
+    {
+      "asiento": 3,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "María",
+      "dniPagador": "44556677H",
+      "tarjeta": "038 0025 5553 5553",
+      "codigoVenta": "iISO7aJ"
+    }
+  ],
+  "costeBillete": 65
+},{
+  "_id": {
+    "$oid": "6007f81b5feb210ec8e908f4"
+  },
+  "codigo": "IB707",
+  "origen": "MADRID",
+  "destino": "MURCIA",
+  "fecha": "2020-12-17",
+  "hora": "19:00",
+  "plazas_totales": 200,
+  "plazas_disponibles": 195,
+  "vendidos": [
+    {
+      "asiento": 3,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "uRBBRjd"
+    },
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "Llthisk"
+    },
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "Eh3cV2D"
+    },
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "SpllM9e"
+    },
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "GTWkMMi"
+    },
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "Q6jHDmt"
+    },
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "Mra5vwT"
+    },
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "Mfy7Jkn"
+    },
+    {
+      "asiento": 1,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "S8xRvcU"
+    },
+    {
+      "asiento": 2,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "TNOVJj8"
+    },
+    {
+      "asiento": 3,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "nnQC2tH"
+    },
+    {
+      "asiento": 4,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "arvWUz6"
+    },
+    {
+      "asiento": 5,
+      "dni": "44556677H",
+      "apellido": "Rodriguez",
+      "nombre": "Manuel",
+      "dniPagador": "44556677F",
+      "tarjeta": "038 0025 5553 5554",
+      "codigoVenta": "ae3mdeU"
+    }
+  ],
+  "costeBillete": 40
+},{
+  "_id": {
+    "$oid": "6007f81b5feb210ec8e908f5"
+  },
+  "codigo": "IB708",
+  "origen": "MADRID",
+  "destino": "BILBAO",
+  "fecha": "2020-12-18",
+  "hora": "18:50",
+  "plazas_totales": 200,
+  "plazas_disponibles": 197,
+  "vendidos": [
+    {
+      "asiento": 1,
+      "dni": "123",
+      "apellido": "123",
+      "nombre": "123",
+      "dniPagador": "123",
+      "tarjeta": "12345678",
+      "codigoVenta": "CYVYZhs"
+    },
+    {
+      "asiento": 2,
+      "dni": "123",
+      "apellido": "123",
+      "nombre": "123",
+      "dniPagador": "123",
+      "tarjeta": "12345678",
+      "codigoVenta": "uJcirgU"
+    },
+    {
+      "asiento": 3,
+      "dni": "123",
+      "apellido": "123",
+      "nombre": "123",
+      "dniPagador": "123",
+      "tarjeta": "12345678",
+      "codigoVenta": "EX7H2ki"
+    }
+  ],
+  "costeBillete": 70
+}]

@@ -4,9 +4,10 @@ use MongoDB\Operation\ModifyCollection;
 
 require_once 'dbConnect.php';
 require_once 'utils.php';
+require_once 'payment.php';
 
 function insert($data) {
-  assert_array_fields($data, 'codigo', 'dni', 'apellido', 'nombre', 'dniPagador', 'tarjeta');
+  assert_array_fields($data, 'codigo', 'dni', 'apellido', 'nombre', 'dniPagador', 'tarjeta', 'pin');
 
   $coll = get_mongo_collection();
 
@@ -19,6 +20,12 @@ function insert($data) {
 
   $detallesVuelo = $coll->findOne(['codigo' => $data['codigo']]);
   $asiento = $detallesVuelo['plazas_totales'] - $detallesVuelo['plazas_disponibles'] + 1;
+
+  $paymentResult = processPayment($data['tarjeta'], $data['pin'], @$detallesVuelo['costeBillete']);
+  if ($paymentResult->ok === false) {
+    $msg = $paymentResult->msg;
+    die(format_error("No se pudo completar el pago. Reason: $msg"));
+  }
 
   $updateDoc = [
     '$push' => 
