@@ -74,7 +74,8 @@ Se envía lo siguiente desde el cliente
 	"apellido" : "Rodriguez",
     "nombre" : "María",
     "dniPagador" : "44556677H",
-    "tarjeta" : "038 0025 5553 5553"
+    "tarjeta" : "038 0025 5553 5553",
+    "pin": 1234
 }
 ```
 
@@ -104,7 +105,7 @@ Si hay algún error
 ```
 {
 	estado: false,
-	mensaje: "No se ha podido realizar la compra por ... (a completar)"
+	mensaje: "..."
 }
 ```
 
